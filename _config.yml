@@ -1,0 +1,63 @@
+# Site
+name: "The Cloud Bee Blog"
+title: "The Cloud Bee Blog"
+description: "Cloud put together in simple words and pictures..."
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/logo.png'
+baseurl: ''
+google_analytics: 'UA-46278016-1'
+disqus: 'thecloudbee'
+mailchimp-list: 'https://mailchi.mp/0104833fd31d/subscribe-to-the-cloud-bee-blog'
+include: ["_pages"]
+permalink: /:title/
+
+# Authors
+authors:
+  amroj:
+    name: Amroj Sandhu
+    display_name: Amroj Sandhu
+    gravatar: 6f4230d6fbdfe22aea2bdcab04f12a40
+    email: amrojpals@gmail.com
+    web: https://www.linkedin.com/in/amrojsandhu/
+    twitter: https://twitter.com/amrojsandhu
+    description: "Author of #thecloudbee blog! Works as a backend engineer. Anything tech gives me goosebumps!"
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-archives
+
+# Archives
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'
+
+# Pagination
+paginate: 6
+paginate_path: /page:num/
+
+# Other
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+
+# Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
+adsense: "disabled"
+adsense-data-ad-client: "ca-pub-3412143450191416"
+adsense-data-ad-slot: "1363087678"
+
+# Lazy Images ("enabled" or "disabled")
+lazyimages: "enabled"
+
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
