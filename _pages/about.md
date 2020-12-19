@@ -4,7 +4,7 @@ title: About
 permalink: /about
 comments: false
 ---
-
+<!-- https://www.successfulblogging.com/about-shane/ -->
 <div class="row justify-content-between">
 <div class="col-md-8 pr-5">
 
@@ -22,7 +22,7 @@ comments: false
 
 <p>Easing your pain to keep updated with the cloud trends. Setting up an easy tone to all the articles so that we understand the basics.</p>
 
-<p>I like to talk about early retirement, tiny houses, CrossFit, and cycling.</p>
+<p>I like to talk about early retirement, CrossFit, and cycling.</p>
 
 <p>Find more about my Software Engineering career @ <a href="https://www.linkedin.com/in/amrojsandhu/">LinkedIn</a></p>
 
