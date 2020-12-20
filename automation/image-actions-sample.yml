@@ -1,0 +1,45 @@
+name: Image Actions
+
+on:
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'assets/images/202*/*.png'
+      - 'assets/images/202*/*.jpg'
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Python Environment
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+          architecture: 'x64'
+      - name: Install Python dependencies
+        uses: py-actions/py-dependency-install@v2
+        with:
+          path: "automation/requirements.txt"
+      - name: Image Resize
+        run: python automation/src/utils/image_resize.py
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v5
+        with:
+          author_name: thecloudbee
+          author_email: amrojpals+thecloudbee@gmail.com
+          message: 'Resize Image'
+          add: '*/images/*'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Image Compression
+        uses: calibreapp/image-actions@1.1.0
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          jpegQuality: 80
+          pngQuality: 80
+          webpQuality: 80
+          ignorePaths: node_modules/**
