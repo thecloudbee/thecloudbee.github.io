@@ -26,6 +26,15 @@ jobs:
           path: "automation/requirements.txt"
       - name: Image Resize
         run: python automation/src/utils/image_resize.py
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v5
+        with:
+          author_name: thecloudbee
+          author_email: amrojpals+thecloudbee@gmail.com
+          message: 'Resize Image'
+          add: '*/images/*'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Image Compression
         uses: calibreapp/image-actions@1.1.0
         with:
