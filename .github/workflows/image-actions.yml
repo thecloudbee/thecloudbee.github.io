@@ -1,16 +1,11 @@
 name: Image Actions
 
 on:
-  push:
-    branches: [ master ]
-    paths:
-      - 'assets/images/*/*.png'
-      - 'assets/images/*/*.jpg'
   pull_request:
     branches: [ master ]
     paths:
-      - 'assets/images/*/*.png'
-      - 'assets/images/*/*.jpg'
+      - 'assets/images/202*/*.png'
+      - 'assets/images/202*/*.jpg'
 
   workflow_dispatch:
 
@@ -20,16 +15,22 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Image Actions
+      - name: Setup Python Environment
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+          architecture: 'x64'
+      - name: Install Python dependencies
+        uses: py-actions/py-dependency-install@v2
+        with:
+          path: "automation/requirements.txt"
+      - name: Image Resize
+        run: python automation/src/utils/image_resize.py
+      - name: Image Compression
         uses: calibreapp/image-actions@1.1.0
         with:
-          # GitHub Token
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          # JPEG quality level
           jpegQuality: 80
-          # PNG quality level
           pngQuality: 80
-          # WEBP quality level
           webpQuality: 80
-          # Paths to ignore during search
           ignorePaths: node_modules/**
