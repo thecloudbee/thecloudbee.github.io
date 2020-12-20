@@ -1,0 +1,37 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Image Compression
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'assets/images/*/*.png'
+      - 'assets/images/*/*.jpg'
+  pull_request:
+    branches: [ master ]
+    paths:
+      - 'assets/images/*/*.png'
+      - 'assets/images/*/*.jpg'
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Image Actions
+        uses: calibreapp/image-actions@1.1.0
+        with:
+          # GitHub Token
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+          # JPEG quality level
+          jpegQuality: 80
+          # PNG quality level
+          pngQuality: 80
+          # WEBP quality level
+          webpQuality: 80
+          # Paths to ignore during search
+          ignorePaths: node_modules/**
