@@ -1,5 +1,1 @@
-psycopg2-binary
-requests==2.24.0
-toml==0.10.2
-jinja2==2.11.2
 Pillow==8.0.1
