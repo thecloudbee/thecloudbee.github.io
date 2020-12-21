@@ -5,7 +5,7 @@ description: "Cloud put together in simple words and pictures..."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: ''
-google_analytics: 'UA-46278016-1'
+google_analytics: 'G-0R2EGTZ7TZ'
 disqus: 'thecloudbee'
 mailchimp-list: 'https://mailchi.mp/0104833fd31d/subscribe-to-the-cloud-bee-blog'
 include: ["_pages"]
