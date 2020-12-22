@@ -1,7 +1,7 @@
 <!--https://esc.sh/blog/load-disqus-on-click/-->
 <div class="show-comments">
 <!--    <button id="show-comments-button" onclick="disqus();return false;" class="btn default">💬 Comments</button>-->
-    <button type="button" class="btn btn-secondary">💬 Comments</button>
+    <button id="show-comments-button" type="button" class="btn btn-secondary" onclick="disqus();return false;">💬 Comments</button>
 </div>
 
 <div id="disqus_thread"></div>
@@ -15,7 +15,7 @@ function disqus() {
         var e = document.createElement("script");
         e.type = "text/javascript";
         e.async = true;
-        e.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+        e.src = "https://" + disqus_shortname + ".disqus.com/embed.js";
         (document.getElementsByTagName("head")[0] ||
         document.getElementsByTagName("body")[0])
         .appendChild(e);
