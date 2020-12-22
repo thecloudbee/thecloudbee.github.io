@@ -1,16 +1,16 @@
 ---
 layout: post
-title:  "Steps to write your first CloudFormation Template"
+title:  "Steps to write your First CloudFormation Template"
 author: amroj
-categories: [awscloud, cloudformation, infraascode]
-image: assets/images/2021-01-01/head.png
-description: "Create AWS resources with code."
+categories: 
+image: assets/images/2020-12-22/head.png
+description: "Dummies guide to create AWS resources with code - CFTs."
 featured: true
 hidden: true
 rating: 0
 ---
 
-### Why use the CloudFormation Template?
+## Why use the CloudFormation Template?
 
 One sure way to create an EC2 is via the AWS Console. You can click on "Create Instance" and enter subnets, security groups, and the instance type. Submit. It's easy.
 
@@ -18,7 +18,7 @@ But, can you do the same steps 20 times over — in order to create a cluster wi
 
 The answer is, No.
 
-![2021-01-01/1.png]({{ site.baseurl }}/assets/images/2021-01-01/1.png){: .center-image }
+![2020-12-22/1.png]({{ site.baseurl }}/assets/images/2020-12-22/1.png){: .center-image }
 
 ## Hence, CloudFormation.
 
@@ -28,7 +28,7 @@ This article is your first look at CFT and how to write a minimal CFT that is ma
 
 The CFT below creates an EC2 Instance in AWS.
 
-{% gist 35adb2c30d2f2db9a54520128813be1 %}
+{% gist thecloudbee/b35adb2c30d2f2db9a54520128813be1 %}
 
 We can infer from the above YAML file that we are creating an EC2 instance with the Instance type `t2.micro`. 
 
@@ -36,7 +36,7 @@ Run the above CFT in the AWS Console > Goto CloudFormation > Choose the desired 
 
 Once we click on the "create stack" button, we will see an instance was created.
 
-![2021-01-01/2.png]({{ site.baseurl }}/assets/images/2021-01-01/2.png){: .center-image }
+![2020-12-22/2.png]({{ site.baseurl }}/assets/images/2020-12-22/2.png){: .center-image }
 
 ## How to separate the variables?
 
@@ -46,15 +46,15 @@ As per coding practices it makes sense to keep code and variable separate. Let's
 
 By moving the hard-coding from the configs to parameters it makes a lot of sense. It is easier to have a glance at all the variables, since they are put together.
 
-I don't want to go with a fixed instance type i.e. "m5.2xlarge" in our case. Would it not be a better idea to choose instance type as and when I run the CFT.
+I don't want to go with a fixed instance type i.e. "t2.micro" in our case. Is it not a better idea to choose instance type as and when I run the CFT?
 
 So the final version of our CFT will look like.
 
-{% gist 1db06e7a835dd4e3dd6f2ba60fa860 %}
+{% gist aa1db06e7a835dd4e3dd6f2ba60fa860 %}
 
 Now, when we put this template into the AWS Console, it will show us the following selection.
 
-![2021-01-01/3.png]({{ site.baseurl }}/assets/images/2021-01-01/3.png){: .center-image }
+![2020-12-22/3.png]({{ site.baseurl }}/assets/images/2020-12-22/3.png){: .center-image }
 
 ## Conclusion
 
