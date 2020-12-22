@@ -2,7 +2,7 @@
 layout: post
 title:  "Steps to write your First CloudFormation Template"
 author: amroj
-categories: 
+categories: [awscloud, cloudformation, infrascode]
 image: assets/images/2020-12-22/head.png
 description: "Dummies guide to create AWS resources with code - CFTs."
 featured: true
