@@ -25,7 +25,7 @@ jobs:
           outputDirectory: /tmp/artifacts
           urls: 'https://www.thecloudbee.blog,https://www.thecloudbee.blog/dummies-cft'
           sha: ${{ github.sha }}
-#          slackWebhookUrl: ${{ secrets.LIGHTHOUSE_CHECK_WEBHOOK_URL }}
+          slackWebhookUrl: ${{ secrets.SLACK_WEBHOOK }}
       - name: Upload artifacts
         uses: actions/upload-artifact@master
         with:
