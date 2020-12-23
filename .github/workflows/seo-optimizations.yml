@@ -14,5 +14,20 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      # https://github.com/marketplace/actions/lighthouse-check
+      - run: mkdir /tmp/artifacts
       - name: Lighthouse Check
-        uses: foo-software/lighthouse-check-action@v2.0.5
+        uses: foo-software/lighthouse-check-action@master
+        with:
+          accessToken: ${{ secrets.GITHUB_TOKEN }}
+          author: ${{ github.actor }}
+          branch: ${{ github.ref }}
+          outputDirectory: /tmp/artifacts
+          urls: 'https://www.thecloudbee.blog,https://www.thecloudbee.blog/dummies-cft'
+          sha: ${{ github.sha }}
+#          slackWebhookUrl: ${{ secrets.LIGHTHOUSE_CHECK_WEBHOOK_URL }}
+      - name: Upload artifacts
+        uses: actions/upload-artifact@master
+        with:
+          name: Lighthouse reports
+          path: /tmp/artifacts
