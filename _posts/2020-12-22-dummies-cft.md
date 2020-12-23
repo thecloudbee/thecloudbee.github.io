@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Steps to write your First CloudFormation Template"
+title:  "How to Create AWS Resources With Code? - CloudFormation"
 author: amroj
 categories: [awscloud, cloudformation, infrascode]
 image: assets/images/2020-12-22/head.webp
-description: "Dummies guide to create AWS resources with code - CFTs."
+description: "CloudFormation can take the pain away from creating resources, through console. Automate the creation of resources through configurations in AWS through CFT. But, how to write a CFT that is maintainable?"
 featured: true
 hidden: true
 rating: 0
