@@ -23,7 +23,7 @@ jobs:
           author: ${{ github.actor }}
           branch: ${{ github.ref }}
           outputDirectory: /tmp/artifacts
-          urls: 'https://www.thecloudbee.blog,https://www.thecloudbee.blog/dummies-cft'
+          urls: 'https://www.thecloudbee.blog,https://www.thecloudbee.blog/cft-vs-terraform'
           sha: ${{ github.sha }}
           slackWebhookUrl: ${{ secrets.SLACK_WEBHOOK }}
       - name: Upload artifacts
