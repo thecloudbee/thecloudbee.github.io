@@ -3,7 +3,7 @@ layout: post
 title:  "CloudFormation vs Terraform: My Experience With Both"
 author: amroj
 categories: [cloudformation, infrascode, terraform]
-image: assets/images/2021-01-11/head.webp
+image: assets/images/2021-01-11/head.png
 description: "Infra-as-code is the backbone for any cloud. But, why should one look beyond CloudFormation Templates?"
 featured: true
 hidden: true
@@ -30,7 +30,7 @@ I have been writing CloudFormation Templates (CFTs) for 4 years. But once I wrot
 
 Terraform understands the Abstraction. One can build a database module separated from the functions module. On the other hand, doing this through CFT means one CFTs for database and another one for functions.
 
-![2021-01-11/1.webp]({{ site.baseurl }}/assets/images/2021-01-11/1.webp){: .center-image }
+![2021-01-11/1.png]({{ site.baseurl }}/assets/images/2021-01-11/1.png){: .center-image }
 
 The Terraform modules provide a light-weight abstraction. We can leverage this abstraction to make our code understandable and easy to navigate. As in the above example we have different modules for app and data.
 
@@ -44,7 +44,7 @@ Now, switching between the argument in `FindInMap`, one can get different flavor
 
 Comparing the above scenario with Terraform. We can leverage Terraform variables to reuse the code for different deployment plans. The `terraform init` command creates a working directory with the Terraform Configuration Files. 
 
-![2021-01-11/2.webp]({{ site.baseurl }}/assets/images/2021-01-11/2.webp){: .center-image }
+![2021-01-11/2.png]({{ site.baseurl }}/assets/images/2021-01-11/2.png){: .center-image }
 
 The above folder structure in Terraform makes it easy to switch between the lab and staging flavours. Example is the following command.
 
@@ -56,11 +56,11 @@ Both CloudFormation and Terraform have state management in-built. Both of these 
 
 This is how the AWS CloudFormation changeset looks like when you create a change over an existing CFT.
 
-![2021-01-11/3.webp]({{ site.baseurl }}/assets/images/2021-01-11/3.webp){: .center-image }
+![2021-01-11/3.png]({{ site.baseurl }}/assets/images/2021-01-11/3.png){: .center-image }
 
 Now compare the above with the extra details provided by terraform when we are over-writing a change.
 
-![2021-01-11/4.webp]({{ site.baseurl }}/assets/images/2021-01-11/4.webp){: .center-image }
+![2021-01-11/4.png]({{ site.baseurl }}/assets/images/2021-01-11/4.png){: .center-image }
 
 The above snippet shows the details Terraform plan provides in comparison to AWS CloudFormation. We can make out that only the tags are changing for the Instance in Terraform. But in AWS CloudFormation no details are provided -- only the resources that are changing are listed.
 

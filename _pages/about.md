@@ -35,7 +35,7 @@ comments: false
 <div class="sticky-top sticky-top-80">
 <h5>Amroj Sandhu</h5>
 
-<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/amroj.webp" alt="lost it!!" /></p>
+<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/amroj.png" alt="lost it!!" /></p>
 
 </div>
 

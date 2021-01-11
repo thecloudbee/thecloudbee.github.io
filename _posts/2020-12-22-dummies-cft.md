@@ -3,7 +3,7 @@ layout: post
 title:  "How to Create AWS Resources With Code? - CloudFormation"
 author: amroj
 categories: [awscloud, cloudformation, infrascode]
-image: assets/images/2020-12-22/head.webp
+image: assets/images/2020-12-22/head.png
 description: "CloudFormation can take the pain away from creating resources, through console. Automate the creation of resources through configurations in AWS through CFT. But, how to write a CFT that is maintainable?"
 featured: true
 hidden: true
@@ -18,7 +18,7 @@ But, can you do the same steps 20 times over — in order to create a cluster wi
 
 The answer is, No.
 
-![2020-12-22/1.png]({{ site.baseurl }}/assets/images/2020-12-22/1.webp){: .center-image }
+![2020-12-22/1.png]({{ site.baseurl }}/assets/images/2020-12-22/1.png){: .center-image }
 
 ## Hence, CloudFormation.
 
@@ -36,7 +36,7 @@ Run the above CFT in the AWS Console > Goto CloudFormation > Choose the desired 
 
 Once we click on the "create stack" button, we will see an instance was created.
 
-![2020-12-22/2.png]({{ site.baseurl }}/assets/images/2020-12-22/2.webp){: .center-image }
+![2020-12-22/2.png]({{ site.baseurl }}/assets/images/2020-12-22/2.png){: .center-image }
 
 ## How to separate the variables?
 
@@ -54,7 +54,7 @@ So the final version of our CFT will look like.
 
 Now, when we put this template into the AWS Console, it will show us the following selection.
 
-![2020-12-22/3.png]({{ site.baseurl }}/assets/images/2020-12-22/3.webp){: .center-image }
+![2020-12-22/3.png]({{ site.baseurl }}/assets/images/2020-12-22/3.png){: .center-image }
 
 ## Conclusion
 
