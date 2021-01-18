@@ -4,7 +4,7 @@ title:  "Tailor your ES Indexes for faster queries - define Analyzers"
 author: amroj
 categories: [elasticsearch]
 image: assets/images/2021-01-18/head.png
-description: "The default indexing strategy in Elasticsearch is not the best option for you. Understanding how ES stores the data has an impact on search performance is trivial."
+description: "The default indexing strategy in Elasticsearch is not the best option for you. Understanding how data stored in ES impacts the search performance is trivial."
 featured: true
 hidden: true
 rating: 0
