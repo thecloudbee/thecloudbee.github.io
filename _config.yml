@@ -1,7 +1,7 @@
 # Site
 name: "The Cloud Bee Blog"
 title: "The Cloud Bee Blog"
-description: "Cloud put together in simple words and pictures..."
+description: "Your 3 min reads for everything cloud..."
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: ''
