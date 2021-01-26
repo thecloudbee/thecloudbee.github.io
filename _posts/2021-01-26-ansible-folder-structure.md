@@ -28,32 +28,7 @@ Keeping in mind the above deployment plan, we can point out that Java must be a 
 
 The minimal folder structure to contain the above requirements.
 
-```
-group-vars/
-├── all.yml
-roles/
-├── java/
-	├── defaults
-	│   └── main.yml
-	├── files
-	├── tasks
-	│   └── main.yml
-	├── templates
-├── kafka/
-	├── defaults
-	│   └── main.yml
-	├── files
-	├── tasks
-	│   └── main.yml
-	├── templates
-├── zookeeper/
-	├── defaults
-	│   └── main.yml
-		....
-hosts/
-│   └── hosts
-playbook_kafka_cluster.yml
-```
+{% gist thecloudbee/666f6fe0dfca805e3effbeab8a46803c %}
 
 We have three different roles Java, Kafka and Zookeeper. Each of the roles acts as an independent entity and can run in isolation.
 
