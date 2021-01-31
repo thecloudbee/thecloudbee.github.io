@@ -14,3 +14,4 @@ jobs:
           app_secret: ${{ secrets.MEDIUM_APP_SECRET }}
           access_token: ${{ secrets.MEDIUM_ACCESS_TOKEN }}
           markdown_file: medium/2021-02-01-es-cluster-red.md
+          base_url: https://thecloudbee.blog/
