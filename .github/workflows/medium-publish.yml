@@ -15,4 +15,4 @@ jobs:
           app_id: ${{ secrets.MEDIUM_APP_ID }}
           app_secret: ${{ secrets.MEDIUM_APP_SECRET }}
           access_token: ${{ secrets.MEDIUM_ACCESS_TOKEN }}
-          markdown: ${{ steps.post.outputs.data }}
+          markdown_file: ${{ steps.post.outputs.data }}
