@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Read the post
         id: post
-        run: echo "::set-output name=data::$(cat ./.medium/2021-02-01-es-cluster-red.md)"
+        run: echo "::set-output name=data::$(cat ./medium/2021-02-01-es-cluster-red.md)"
       - uses: InfraWay/post-medium-action@v1.1.1
         with:
           app_id: ${{ secrets.MEDIUM_APP_ID }}
