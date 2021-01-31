@@ -9,9 +9,7 @@ An Elasticsearch index is composed of many shards. A shard is a unit of data tha
 
 That implies each index is divided into 5 units and each of the 5 units has one replica. In total, we will have 10 shards.
 
-![Elasticsearch%20Cluster%20Is%20Red%20%E2%80%94%20What%20Must%20Be%20Your%20A%2066cdb756f6184c82be9b6ebc2b844a1c/Untitled.png](Elasticsearch%20Cluster%20Is%20Red%20%E2%80%94%20What%20Must%20Be%20Your%20A%2066cdb756f6184c82be9b6ebc2b844a1c/Untitled.png)
-
-Shard distribution of an Index
+![1.png](https://www.thecloudbee.blog/assets/images/2021-01-26/head.png)
 
 Considering the above arrangement of primary (red) and replica (white) shards across 3 nodes in an ES cluster. Further, the node in the region uswest dies. That implies that shards (1, 5, 2, 4) are not part of the cluster. The cluster has lost some of its primary shards. Hence, the **cluster is Red**.
 
