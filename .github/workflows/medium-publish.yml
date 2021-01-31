@@ -1,6 +1,10 @@
 name: Post on Medium
 
-on: [push]
+on:
+  push:
+    branches: [master]
+    paths:
+      - '.medium/*.md'
 
 jobs:
   build:

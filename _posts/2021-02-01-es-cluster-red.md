@@ -1,7 +1,14 @@
-#Elasticsearch Cluster Is Red — What Must Be Your Action Plan?
-Elasticsearch cluster is red 🚨 — that seems like a warning to take a quick action upon. Here is a guide to bring the cluster back to life.
-
-https://thecloudbee.blog/assets/images/2021-02-01/head.png
+---
+layout: post
+title:  "Elasticsearch Cluster Is Red — What Must Be Your Action Plan?"
+author: amroj
+categories: elasticsearch
+image: assets/images/2021-02-01/head.png
+description: "Elasticsearch cluster is red 🚨 — that seems like a warning to take a quick action upon. Here is a guide to bring the cluster back to life."
+featured: true
+hidden: true
+rating: 0
+---
 
 ## What is a Red Cluster?
 
@@ -11,7 +18,7 @@ An Elasticsearch index is composed of many shards. A shard is a unit of data tha
 
 That implies each index is divided into 5 units and each of the 5 units has one replica. In total, we will have 10 shards.
 
-![2021-02-01/1.png](https://thecloudbee.blog/assets/images/2021-02-01/1.png)
+![2021-02-01/1.png]({{ site.baseurl }}/assets/images/2021-02-01/1.png){: .center-image }
 
 Considering the above arrangement of primary (red) and replica (white) shards across 3 nodes in an ES cluster. Further, the node in the region uswest dies. That implies that shards (1, 5, 2, 4) are not part of the cluster. The cluster has lost some of its primary shards. Hence, the **cluster is Red**.
 
@@ -33,7 +40,7 @@ We are laser-focused on finding out the reason why some primary shards are not a
 
 ### Shards and Nodes
 
-![2021-02-01/2.png](https://thecloudbee.blog/assets/images/2021-02-01/2.png)
+![2021-02-01/2.png]({{ site.baseurl }}/assets/images/2021-02-01/2.png){: .center-image }
 
 1. **Nodes:** Number of nodes, also the number of failed nodes, if any.
 2. **Relocating Shards:** The number of shards moving due to the loss of a node or otherwise.
@@ -41,7 +48,7 @@ We are laser-focused on finding out the reason why some primary shards are not a
 
 ### Node Health
 
-![2021-02-01/3.png](https://thecloudbee.blog/assets/images/2021-02-01/3.png)
+![2021-02-01/3.png]({{ site.baseurl }}/assets/images/2021-02-01/3.png){: .center-image }
 
 1. **Available Disk Space Percentage:** The thumb rule is to fill it max up to 80%. This limit is considered a safe bet.
 2. **RAM percentage:** If the RAM percentage is going above 95% or there are peaks in between. This is an alarming situation.
@@ -51,7 +58,7 @@ We are laser-focused on finding out the reason why some primary shards are not a
 
 The above dashboards will help you pin down the issue. Further, once you have fixed the cluster, how will it react?
 
-![2021-02-01/4.png](https://thecloudbee.blog/assets/images/2021-02-01/4.png)
+![2021-02-01/4.png]({{ site.baseurl }}/assets/images/2021-02-01/4.png){: .center-image }
 
 When the cluster is red, we can see the shard (Unassigned Replica) in yellow that is not assigned to any node. Further, Elasticsearch starts a process called shard reallocation. After some time, the snapshot on the right depicts the same was assigned to a node `thecloudbee01`.
 
