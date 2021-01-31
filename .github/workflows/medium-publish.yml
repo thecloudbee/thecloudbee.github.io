@@ -1,0 +1,18 @@
+name: Post on Medium
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Read the post
+        id: post
+        run: echo "::set-output name=data::$(cat ./.medium/2021-02-01-es-cluster-red.md)"
+      - uses: infraway/medium-post-markdown@v1
+        with:
+          app_id: ${{ secrets.MEDIUM_APP_ID }}
+          app_secret: ${{ secrets.MEDIUM_APP_SECRET }}
+          access_token: ${{ secrets.MEDIUM_ACCESS_TOKEN }}
+          markdown: ${{ steps.post.outputs.data }}
