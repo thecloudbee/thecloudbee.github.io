@@ -1,0 +1,21 @@
+name: Post on Medium
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '.medium/*.md'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: InfraWay/post-medium-action@v1.1.1
+        with:
+          app_id: ${{ secrets.MEDIUM_APP_ID }}
+          app_secret: ${{ secrets.MEDIUM_APP_SECRET }}
+          access_token: ${{ secrets.MEDIUM_ACCESS_TOKEN }}
+          markdown_file: .medium/2021-02-01-es-cluster-red.md
+          base_url: https://thecloudbee.blog/
