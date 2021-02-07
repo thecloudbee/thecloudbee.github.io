@@ -5,8 +5,8 @@ author: amroj
 categories: [awscloud, cloudformation, infrascode]
 image: assets/images/2020-12-22/head.png
 description: "CloudFormation can take the pain away from creating resources, through console. Automate the creation of resources through configurations in AWS through CFT. But, how to write a CFT that is maintainable?"
-featured: true
-hidden: true
+featured: false
+hidden: false
 rating: 0
 ---
 
