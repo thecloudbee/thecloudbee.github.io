@@ -6,9 +6,9 @@ on:
       - edited
       - synchronize
   schedule:
-    # Monday, 10:30 AM IST i.e. Monday, 5:00 AM UTC
-    # https://crontab.guru/#12_5_*_*_1
-    - cron: 12 5 * * 1
+    # Monday, 9:30 AM IST i.e. Monday, 4:00 AM UTC
+    # https://crontab.guru/#0_4_*_*_1
+    - cron: 0 4 * * 1
 
 jobs:
   merge_schedule:

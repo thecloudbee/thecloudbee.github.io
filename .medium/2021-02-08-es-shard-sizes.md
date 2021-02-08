@@ -1,3 +1,8 @@
+---
+slug: es-shard-sizes
+tags: elasticsearch
+...
+
 # Control the Size of Shards — Supercharge Elasticsearch for Performance
 
 Shards are the heart of Elasticsearch. This blog takes the understanding of shards further to link it with performance.
