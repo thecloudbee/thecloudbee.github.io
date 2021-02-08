@@ -5,8 +5,8 @@ author: amroj
 categories: ansible
 image: assets/images/2021-01-26/head.png
 description: "Ansible helps us to setup or configure 100s of machines in an agent-less manner. This guide will help you structure the Ansible Playbook such that it is more intuitive — the team will love to collaborate."
-featured: true
-hidden: true
+featured: false
+hidden: false
 rating: 0
 ---
 

@@ -64,3 +64,7 @@ adsense-data-ad-slot: "1363087678"
 lazyimages: "enabled"
 
 exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
+
+# Filtering Content
+future              : true
+unpublished         : true
