@@ -9,12 +9,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
       - uses: jitterbit/get-changed-files@v1
         with: 
           format: 'space-delimited'
+      - run: |
+          for changed_file in ${{ steps.files.outputs.added_modified }}; do
+            echo "Posting file to Medium: ${changed_file}."
+          done
       - uses: InfraWay/post-medium-action@v1.1.1
         with:
           app_id: ${{ secrets.MEDIUM_APP_ID }}
