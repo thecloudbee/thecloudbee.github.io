@@ -54,4 +54,3 @@ A notable point is that the Rollover index is a configuration. But, the later is
 Understanding the role shards has to play in search performance is crucial. We can use Rollover and Shrink API to make a perfect balance of shards inside the cluster. 
 
 This will not only save on compute power but also the memory. ES keeps index and shard metadata in the main memory. Hence, we are saving on that as well. With a lot of savings, book a beach holiday this year. 🏖
-
