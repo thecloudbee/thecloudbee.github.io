@@ -18,7 +18,7 @@ jobs:
       - name: Extract Medium File
         id: medium_markdown_file
         run: |
-          echo ::set-output name=file_name::$(echo ${{ steps.all_changed_files.outputs.added_modified }} | sed "s/.*medium\///;s/md\..*//")
+          echo ::set-output name=file_name::$(echo ${{ steps.all_changed_files.outputs.added_modified }} | sed "s/.*medium\///;s/\.md.*//")
       - uses: InfraWay/post-medium-action@v1.1.1
         with:
           app_id: ${{ secrets.MEDIUM_APP_ID }}
