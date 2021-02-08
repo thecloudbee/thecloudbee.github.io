@@ -11,11 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: jitterbit/get-changed-files@v1
-        with: 
-          format: 'space-delimited'
+      - id: medium_new_files
+        uses: trilom/file-changes-action@v1.2.4
       - run: |
-          for changed_file in ${{ steps.files.outputs.added_modified }}; do
+          for changed_file in ${{ steps.file_changes.outputs.files_modified }}; do
             echo "Posting file to Medium: ${changed_file}."
           done
       - uses: InfraWay/post-medium-action@v1.1.1
@@ -23,5 +22,5 @@ jobs:
           app_id: ${{ secrets.MEDIUM_APP_ID }}
           app_secret: ${{ secrets.MEDIUM_APP_SECRET }}
           access_token: ${{ secrets.MEDIUM_ACCESS_TOKEN }}
-          markdown_file: ${{ steps.files.outputs.added_modified }}
+          markdown_file: ${{ steps.file_changes.outputs.files_modified }}
           base_url: https://thecloudbee.blog/
