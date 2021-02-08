@@ -1,6 +1,6 @@
 ---
 slug: es-shard-sizes
-tags: elasticsearch
+tags: [elasticsearch]
 ...
 
 # Control the Size of Shards — Supercharge Elasticsearch for Performance
