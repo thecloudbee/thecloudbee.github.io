@@ -20,7 +20,7 @@ jobs:
         run: |
           echo ::set-output name=file_name::$(echo ${{ steps.all_changed_files.outputs.added_modified }} | sed "s/.*medium\///;s/\.md.*//")
       - name: Clone from InfraWay/post-medium-action@v1.1.1
-        uses: .github/actions/post-medium-action/
+        uses: ./.github/actions/post-medium-action/
         with:
           app_id: ${{ secrets.MEDIUM_APP_ID }}
           app_secret: ${{ secrets.MEDIUM_APP_SECRET }}
