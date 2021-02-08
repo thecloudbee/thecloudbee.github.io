@@ -12,10 +12,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - uses: jitterbit/get-changed-files@v1
+        with: 
+          format: 'space-delimited'
       - uses: InfraWay/post-medium-action@v1.1.1
         with:
           app_id: ${{ secrets.MEDIUM_APP_ID }}
           app_secret: ${{ secrets.MEDIUM_APP_SECRET }}
           access_token: ${{ secrets.MEDIUM_ACCESS_TOKEN }}
-          markdown_file: .medium/2021-02-08-es-shard-sizes.md
+          markdown_file: ${{ steps.files.outputs.added_modified }}
           base_url: https://thecloudbee.blog/
