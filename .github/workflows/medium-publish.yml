@@ -21,13 +21,13 @@ jobs:
           echo ::set-output name=file_name::$(echo ${{ steps.all_changed_files.outputs.added_modified }} | sed "s/.*medium\///;s/\.md.*//")
       - name: Publish draft to Medium
         id: medium_response
-        uses: InfraWay/post-medium-action@v1.2.0
+        uses: InfraWay/post-medium-action@v1.3.0
         with:
           app_id: ${{ secrets.MEDIUM_APP_ID }}
           app_secret: ${{ secrets.MEDIUM_APP_SECRET }}
           access_token: ${{ secrets.MEDIUM_ACCESS_TOKEN }}
           markdown_file: .medium/${{ steps.medium_markdown_file.outputs.file_name }}.md
-          base_url: https://thecloudbee.blog/
+          base_url: https://thecloudbee.blog
       - run: |
           echo 'Published to Medium @'
           echo ${{ steps.medium_response.outputs.url }}

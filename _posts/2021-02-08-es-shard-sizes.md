@@ -6,7 +6,7 @@ categories: elasticsearch
 image: assets/images/2021-02-08/head.png
 description: "Shards are the heart of Elasticsearch. This blog takes the understanding of shards further to link it with performance."
 featured: true
-hidden: false
+hidden: true
 rating: 0
 ---
 
@@ -19,7 +19,7 @@ The search power of Elasticsearch revolves around the shard size. An index has m
 
 > One shard is searched by a single thread.
 
-![2021-02-08/1.png]({{ site.baseurl }}/assets/images/2021-02-08/1.png){: .half-image }
+![2021-02-08/1.png]({{ site.baseurl }}/assets/images/2021-02-08/1.png){: .center-image }
 
 Both the indexes are storing the same amount of data but with different shard sizes. The left index has smaller shards as compared to the right one. More aggregations have to perform on the left one. But in the later index, search time per shard is greater, as it is storing double the amount of data.
 
