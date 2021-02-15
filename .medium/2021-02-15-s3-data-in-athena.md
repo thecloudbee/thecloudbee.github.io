@@ -57,4 +57,4 @@ Athena is using Presto behind the scenes — which is an interesting distributed
 
 ---
 
-*Originally published at [https://www.thecloudbee.blog](https://www.thecloudbee.blog/s3-data-in-athena/) on .*
+*Originally published at [https://www.thecloudbee.blog](https://www.thecloudbee.blog/s3-data-in-athena/) on February 15, 2021.*
