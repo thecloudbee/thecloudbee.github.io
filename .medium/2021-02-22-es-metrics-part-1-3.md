@@ -9,7 +9,7 @@ An introduction to setting up metrics in Elasticsearch [Part 1 of 3].
 
 ![2021-02-22/head.png](https://www.thecloudbee.blog/assets/images/2021-02-22/head.png)
 
-We talked about Elasticsearch going red in a recent post at [https://thecloudbee.blog](https://thecloudbee.blog/).
+We talked about Elasticsearch going red in a recent post at [https://thecloudbee.blog](https://medium.com/thecloudbee/elasticsearch-cluster-is-red-what-must-be-your-action-plan-7432fdbcf281).
 
 But we must act proactively on such possibilities and never have downtime in ES. But, how to read the Elasticsearch metrics to predict the cluster behavior?
 
